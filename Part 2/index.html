@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directory</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/assignment11-2.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/firstlist.js"></script>
+    <script src="js/detail.js"></script>
+</head>
+
+<body>
+    <!-- Start Page: #start -->
+    <div data-role="page" id="start" data-theme="a">
+
+        <div data-role="header" data-theme="b">
+            <h1>Directory</h1>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-count-theme="a" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search" data-inset="false" id="result">
+                <!-- dynamic data here -->
+            </ul>
+            <br>
+            <br>
+
+            <div id="initial">
+                <h2>Welcome to Directory!</h2>
+                <p>This is a sample app that demonstrates how to build applications with jQuery Mobile.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- /content -->
+    <!-- /start page -->
+
+    <!-- Start of detail page: #detail -->
+    <div data-role="page" id="detail" data-theme="a" data-transition="flip">
+
+        <div data-role="header" data-theme="b">
+            <a href="index.html" data-icon="back">Back</a>
+            <h1>Employee Details</h1>
+            <a href="index.html" data-icon="search">Search</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-count-theme="a" data-inset="false" id="details1"></ul>
+            <!-- dynamic data here -->
+
+            <ul data-role="listview" data-inset="true" id="details2">
+                <!-- dynamic data here -->
+            </ul>
+        </div>
+    </div>
+    <!-- /content -->
+    <!-- /detail page -->
+
+    <!-- Start of manager page: #manager-->
+    <div data-role="page" id="manager" data-theme="a" data-transition="flip">
+        <div data-role="header" data-theme="b">
+            <a href="index.html" data-icon="back">Back</a>
+            <h1>Manager</h1>
+            <a href="index.html" data-icon="search">Search</a>
+        </div>
+        <!-- /header-->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-count-theme="a" data-inset="false" id="mandetails1"></ul>
+            <!--            dynamic data here-->
+            <ul data-role="listview" data-inset="true" id="mandetails2">
+                <!-- dynamic data here-->
+            </ul>
+        </div>
+    </div>
+    <!-- /manager page -->
+
+    <!-- Start of direct reports page: #directreports -->
+    <div data-role="page" id="directreports" data-theme="a" data-transition="flip">
+        <div data-role="header" data-theme="b">
+            <a href="index.html" data-icon="back">Back</a>
+            <h1>Direct Reports</h1>
+            <a href="index.html" data-icon="search">Search</a>
+        </div>
+        <!-- /header -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="false" id="reportslist">
+                <!-- dynamic data here-->
+            </ul>
+            <br>
+            <br>
+        </div>
+        <!-- /content -->
+    </div>
+    <!-- /directreports page -->
+
+</body>
+
+</html>
