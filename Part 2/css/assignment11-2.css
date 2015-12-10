@@ -3,6 +3,17 @@
     padding-bottom: 15px;
 }
 
+
+/*hide ID display*/
+
 em {
     display: none;
+}
+
+img.detail {
+    padding: 10px 15px 0 18px;
+}
+
+.detailtop {
+    margin-bottom: 25px !important;
 }

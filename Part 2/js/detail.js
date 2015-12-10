@@ -17,7 +17,7 @@ $(document).ready(function () {
             empID = json.teammembers[employee].ID;
 
             $("#details1").append(
-                "<li>" + "<img src='" + json.teammembers[employee].ImagePath + "'>" + "<h2>" + json.teammembers[employee].Name + "</h2>" + "<p>" + json.teammembers[employee].Title + "</p>" + "</li>"
+                "<li class='detailtop'>" + "<img src='" + json.teammembers[employee].ImagePath + "'" + " class='detail'" + ">" + "<h2>" + json.teammembers[employee].Name + "</h2>" + "<p>" + json.teammembers[employee].Title + "</p>" + "</li>"
             );
             $('#details1').listview().listview('refresh');
             var managerNum = json.teammembers[employee].ReportsTo - 1;
