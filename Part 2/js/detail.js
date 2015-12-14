@@ -9,9 +9,9 @@ $(document).ready(function () {
         var employee = "";
         var empID = "";
 
-        $('body').on("click", "li", function (e) {
+        $('body').on("click", "ul.team li", function (e) {
             var employeeString = $(this).attr("class").split(" ")[0] - 1;
-            employee = parseInt(employeeString);
+            employee = parseInt(employeeString, 10);
             $("#details1").empty();
             $("#details2").empty();
             empID = json.teammembers[employee].ID;
@@ -28,8 +28,15 @@ $(document).ready(function () {
             var directReports = numOfReports.length;
             var addIDclass = " class='" + empID + "'";
 
+            if (directReports > 0) {
+                var drlink = "directreports";
+            } else {
+                var drlink = "#";
+            }
+            //            window.console.log(directReports + " " + typeof directReports);
+
             $("#details2").append(
-                "<li" + addIDclass + ">" + "<a href='#manager'><h2>View Manager</h2><p>" + managerName + "</p></a></li>" + "<li><a href='#directreports'><h2>View Direct Reports</h2><p>" + directReports + "</p></a></li>" + "<li>" + "<a href=" + "'tel:" + json.teammembers[employee].OfficeNumber + "'>" + "<h2>Call Office</h2>" + "<p>" + json.teammembers[employee].OfficeNumber + "</p></a></li>" + "<li>" + "<a href=" + "'tel:" + json.teammembers[employee].CellNumber + "'>" + "<h2>Call Cell</h2>" + "<p>" + json.teammembers[employee].CellNumber + "</p></a></li>" + "<li>" + "<a href=" + "'mailto:" + json.teammembers[employee].Email + "'>" + json.teammembers[employee].Email + "</a>" + "</li>" +
+                "<li" + addIDclass + ">" + "<a href='#manager'><h2>View Manager</h2><p>" + managerName + "</p></a></li>" + "<li><a href='" + drlink + "'" + "><h2>View Direct Reports</h2><p>" + directReports + "</p></a></li>" + "<li>" + "<a href=" + "'tel:" + json.teammembers[employee].OfficeNumber + "'>" + "<h2>Call Office</h2>" + "<p>" + json.teammembers[employee].OfficeNumber + "</p></a></li>" + "<li>" + "<a href=" + "'tel:" + json.teammembers[employee].CellNumber + "'>" + "<h2>Call Cell</h2>" + "<p>" + json.teammembers[employee].CellNumber + "</p></a></li>" + "<li>" + "<a href=" + "'mailto:" + json.teammembers[employee].Email + "'>" + json.teammembers[employee].Email + "</a>" + "</li>" +
                 "<em>" + json.teammembers[employee].ID + "</em>"
             );
             $('#details2').listview().listview('refresh');
@@ -76,9 +83,9 @@ $(document).ready(function () {
                 });
                 $('#reportslist').listview().listview('refresh');
 
-                $('body').on("click", "li", function (e) {
-                    var employeeNow = $(this).attr("class").split(" ")[0];
-                });
+                //                $('body').on("click", "li", function (e) {
+                //                    var employeeNow = $(this).attr("class").split(" ")[0];
+                //                });
             });
         });
     });
