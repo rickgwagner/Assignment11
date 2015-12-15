@@ -38,7 +38,7 @@
             "OfficeNumber": "323-564-3999",
             "CellNumber": "456-564-4999",
             "Email": "jamesk@company.com",
-            "ReportsTo": 4
+            "ReportsTo": 999
 	},
         {
             "ID": "5",
@@ -119,6 +119,16 @@
             "CellNumber": "456-124-8129",
             "Email": "stevenw@company.com",
             "ReportsTo": 5
+	},
+        {
+            "ID": "999",
+            "Name": "None",
+            "Title": "None",
+            "ImagePath": "images/james_king.jpg",
+            "OfficeNumber": "000",
+            "CellNumber": "000",
+            "Email": "none@company.com",
+            "ReportsTo": 999
 	}
 ]
 }

@@ -12,8 +12,20 @@ $(document).ready(function () {
                 });
                 var numOfSubs = theSubs.length;
                 var addIDclass = " class='" + theID + "'";
+
+                // manager exceptions
+                if (theID == 5) {
+                    var destination = "#manager";
+                } else if (theID == 6) {
+                    var destination = "#manager";
+                } else if (theID == 4) {
+                    var destination = "#manager";
+                } else {
+                    var destination = "#detail";
+                }
+
                 $("#result").append(
-                    "<li" + addIDclass + ">" + "<a href='#detail'><img src='" + value.ImagePath + "'>" + "<h2>" + value.Name + "</h2>" + "<p>" + value.Title + "</p>" + "<span class='ui-li-count'>" + numOfSubs + "</span></a>" + "</li>"
+                    "<li" + addIDclass + ">" + "<a href='" + destination + "'><img src='" + value.ImagePath + "'>" + "<h2>" + value.Name + "</h2>" + "<p>" + value.Title + "</p>" + "<span class='ui-li-count'>" + numOfSubs + "</span></a>" + "</li>"
                 );
                 $('#result').listview().listview('refresh');
             });
